@@ -58,34 +58,68 @@
                 projects, ranging from e-commerce websites to Adroit application
                 which was also awarded as the top project (1st position) at the University Of Johannesburg under 
                 the Applied Information Systems faculty.</P>
-                <div class="tabs">
-                  <p class="tab_link active_link" onclick="opentab('skills')">Skills</p>
-                  <p class="tab_link" onclick="opentab('experience')">Experience</p>
-                  <p class="tab_link" onclick="opentab('education')">Education</p>
-                </div>
-                <div class="tab_content active_tab" id="skills">
-                  <ul>
-                    <li><span>UI/UX</span><br>Design</li>
-                    <li><span>HTML</span><br>10/10</li>
-                    <li><span>CSS</span><br>Design</li>
-                  </ul>
-                </div>
 
-                <div class="tab_content" id="expeience">
-                  <ul>
-                    <li><span>UI/UX</span><br>Design</li>
-                    <li><span>UI/UX</span><br>Design</li>
-                    <li><span>UI/UX</span><br>Design</li>
-                  </ul>
-                </div>
+                 <!-- skills Buttons -->
+                    <div class="skills_buttons">
+                       <button onclick="showSection('skills')">Skills</button>
+                       <button onclick="showSection('experience')">Experience</button>
+                       <button onclick="showSection('education')">Education</button>
+                    </div>
 
-                <div class="tab_content" id="education">
-                  <ul>
-                    <li><span>UI/UX</span><br>Design</li>
-                    <li><span>UI/UX</span><br>Design</li>
-                    <li><span>UI/UX</span><br>Design</li>
-                  </ul>
-                </div>
+                 <!-- Sections for Skills, Experience, and Education -->
+                    <section id="skills" class="cont-section">
+                        <h2>Skills</h2>
+                        <ul>
+                         <li><strong>Web Development:</strong> HTML, CSS, JavaScript</li>
+                         <li><strong>Programming Languages:</strong> Java, C#, Kotlin, PHP, C++</li>
+                         <li><strong>Database Management:</strong> MySQL</li>
+                         <li><strong>Version Control:</strong> Git, GitHub</li>
+                        </ul>
+                   </section>
+
+                   <section id="experience" class="cont-section hidden">
+                        <h2>Experience</h2>
+                      <div class="job">
+                        <h3>Java candidate</h3>
+                        <h4>Capaciti x FNB</h4>
+                        <p><em>September 2024 - Current</em></p>
+                        <ul>
+                        <li>Java </li>
+                        <li>Currently collaborating with the "Clean Code" Team</li>
+                        </ul>
+                       </div>
+                    </section>
+
+                <section id="education" class="cont-section hidden">
+                    <h2>Education</h2>
+                    <div class="degree">
+                      <h3>Diploma in IT in Software Development</h3>
+                      <h4>IIE Rosebank College</h4>
+                       <p><em>Graduated: 2023</em></p>
+                    </div>
+                </section>
+               <script>
+                   function showSection(sectionId) {
+                     // Hide all sections
+                     const sections = document.querySelectorAll('.cont-section');
+                     sections.forEach(section => {
+                      section.classList.remove('active');
+                        section.classList.add('hidden'); // Add hidden class to all sections
+                       });
+
+                        // Show the selected section
+                        const targetSection = document.getElementById(sectionId);
+                       targetSection.classList.remove('hidden'); // Remove hidden class from the selected section
+                       targetSection.classList.add('active'); // Mark as active
+                        }
+
+                       // Show the 'Skills' section by default when the page loads
+                          document.addEventListener('DOMContentLoaded', () => {
+                         showSection('skills');
+                    });
+
+                </script>
+             
         </section> 
         
         <!--Resume section-->
@@ -131,8 +165,8 @@
               <img src="images/work2.jpg" alt="Blog Post 2" />
               <div class="content">
                 <h2>My Achievements</h2>
-                <p>Graduated from IIE Rosebank College with an avegate of 81%
-                    where i was pursuing a Diploma in IT in Software Development
+                <p>Graduated from IIE Rosebank College with an average of 81%
+                    where i was pursuing a Diploma in IT in Software Development.
                 </p>
                 <a href="https://www.linkedin.com/posts/ximiyeto-makhubele-9b3903249_im-not-just-a-miss-world-south-africa-top-activity-7243129804294676480-ldoH?utm_source=share&utm_medium=member_desktop">Read More</a>
               </div>
@@ -141,8 +175,8 @@
               <img src="images/work3.jpg" alt="Blog Post 3" />
               <div class="content">
                 <h2>My Life In Tech</h2>
-                <p>I recently won a tech project with my team called "Tech Craft"
-                    where by our project focused on an Adroit system.</p>
+                <p>My tech project called the Adroit system got position one 
+                    at the University of Johannesburg with my team the "Tech Craft".</p>
                 <a href="https://www.linkedin.com/posts/lethabo-makopo-a7643b184_this-week-team-techcraft-was-crowned-the-activity-7250191596061704194-m7By?utm_source=share&utm_medium=member_desktop">Read More</a>
               </div>
             </article>
@@ -205,7 +239,7 @@
         <a href="https://www.linkedin.com/in/ximiyeto-makhubele-9b3903249?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bof4E0Fn%2FTHCAIHdUdx5zeQ%3D%3D" target="_blank" class="social-icon">
           <i class="fab fa-linkedin"></i>
         </a>
-        <a href="https://www.twitter.com/ximiyeto" target="_blank" class="social-icon">
+        <a href="https://www.twitter.com/shimieym" target="_blank" class="social-icon">
           <i class="fab fa-twitter"></i>
         </a>
         <a href="https://www.instagram.com/shimiey_don/profilecard/?igsh=b3NuMDdkdWRybm04" target="_blank" class="social-icon">
