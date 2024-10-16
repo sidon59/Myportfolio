@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Ximiyeto Portfolio</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="#">Ximiyeto Makhubele</a></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+          <li><a href="My_Portfolio.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Resume</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+</br> </br></br>
+    <section class="section">
+      <div class="section__container">
+        <div class="content">
+          <p class="subtitle">HI THERE</p>
+          <h1 class="title">
+            I am<span> Ximiyeto Makhubele <br/> </span> 
+            UI/UX designer and web developer
+          </h1>
+          <p class="description">
+            Welcome to my profile/portfolio! <br>
+          Get to explore more about me :)</p>
+
+            <h1 class="about" href="#">ABOUT ME</h1>
+            <div class="about-col-1"></div>
+            <P> I am a professional model with titles like Miss World South Africa top10,
+                a former SRC head of academia at the IIE Rosebank College
+                and a Java candidate at Capaciti 
+                with a passion for creating beautiful,
+                responsive as well as user-friendly websites. I've worked on a variety of
+                projects, ranging from e-commerce websites to Adroit application
+                which was also awarded as the top project (1st position) at the University Of Johannesburg under 
+                the Applied Information Systems faculty.</P>
+                <div class="tabs">
+                  <p class="tab_link active_link" onclick="opentab('skills')">Skills</p>
+                  <p class="tab_link" onclick="opentab('experience')">Experience</p>
+                  <p class="tab_link" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab_content active_tab" id="skills">
+                  <ul>
+                    <li><span>UI/UX</span><br>Design</li>
+                    <li><span>UI/UX</span><br>Design</li>
+                    <li><span>UI/UX</span><br>Design</li>
+                  </ul>
+                </div>
+
+                <div class="tab_content" id="expeience">
+                  <ul>
+                    <li><span>UI/UX</span><br>Design</li>
+                    <li><span>UI/UX</span><br>Design</li>
+                    <li><span>UI/UX</span><br>Design</li>
+                  </ul>
+                </div>
+
+                <div class="tab_content" id="education">
+                  <ul>
+                    <li><span>UI/UX</span><br>Design</li>
+                    <li><span>UI/UX</span><br>Design</li>
+                    <li><span>UI/UX</span><br>Design</li>
+                  </ul>
+                </div>
+
+                <br>  <br>  <br>
+
+                <h2><i class="fas fa-time"></i>VIEW OR DOWNLOAD MY RESUME</h2>
+          <div class="action__btns">
+            <button class="blog">View CV</button>
+            <button class="portfolio">Download CV</button>
+          </div>
+        </div>
+        <div class="image">
+          <img src="images/profile.jpg" alt="profile" />
+        </div>
+      </div>
+<br> <br>
+    </section>
+
+    <div id="Blog">
+      <div class="container">
+        <h1 class="sub-title">Blog</h1>
+        <div class="work_list">
+          <div class="work">
+            <img src="images/work1.jpg">
+          </div>
+          <div class="work">
+            <img src="images/work2.jpg">
+          </div>
+          <div class="work">
+            <img src="images/work3.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <p>Get to know me more behind code</p>
+
+    <h1>Contact Me</h1>
+<div class="contact">
+    <form action="#"method=POST>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name"required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email"required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit"><i class="fas fa-paper-plane"></i>Send message</button>
+
+    </form>
+</div>
+    <!----to be continued (JS)------>
+<script> 
+  var tablinks= document.getElementsByClassName("tab_link");
+  var tabcontents = document.getElementsByClassName("tab_content");
+
+  function opentab(tabname){
+    for(tablink of tablinks){
+      tablink.classList.remove("active_link");
+    }
+    for(tabcontents of tabcontents){
+      tabcontents.classList.remove("active_tab");
+    }
+    event.currentTarget.classList.add("active_link");
+    document.getElementById(tabname).classList.add("active_tab");
+  }
+</script>
+  </body>
+</html>
