@@ -9,6 +9,10 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
       rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <!--For the Icons-->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
     <title>Ximiyeto Portfolio</title>
   </head>
   <body>
@@ -20,28 +24,31 @@
         </label>
         <input type="checkbox" name="check" id="check" />
         <ul>
+            <!--navigation-->
           <li><a href="My_Portfolio.html">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Resume</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
-</br> </br></br>
+    <!--landing page-->
     <section class="section">
       <div class="section__container">
         <div class="content">
           <p class="subtitle">HI THERE</p>
           <h1 class="title">
             I am<span> Ximiyeto Makhubele <br/> </span> 
-            UI/UX designer and web developer
+           an aspiring UI/UX designer and web developer
           </h1>
           <p class="description">
             Welcome to my profile/portfolio! <br>
-          Get to explore more about me :)</p>
+          Get to explore more about me and my work :)</p>
 
-            <h1 class="about" href="#">ABOUT ME</h1>
+          <!--about section-->
+        <section id="about">
+            <h1 class="about" href="about">ABOUT ME</h1>
             <div class="about-col-1"></div>
             <P> I am a professional model with titles like Miss World South Africa top10,
                 a former SRC head of academia at the IIE Rosebank College
@@ -59,8 +66,8 @@
                 <div class="tab_content active_tab" id="skills">
                   <ul>
                     <li><span>UI/UX</span><br>Design</li>
-                    <li><span>UI/UX</span><br>Design</li>
-                    <li><span>UI/UX</span><br>Design</li>
+                    <li><span>HTML</span><br>10/10</li>
+                    <li><span>CSS</span><br>Design</li>
                   </ul>
                 </div>
 
@@ -79,72 +86,140 @@
                     <li><span>UI/UX</span><br>Design</li>
                   </ul>
                 </div>
-
-                <br>  <br>  <br>
-
-                <h2><i class="fas fa-time"></i>VIEW OR DOWNLOAD MY RESUME</h2>
-          <div class="action__btns">
+        </section> 
+        
+        <!--Resume section-->
+        <section id="resume">
+          <h2><i class="fas fa-time"></i>VIEW OR DOWNLOAD MY RESUME</h2><br>
+            <div class="action__btns">
+            <!--View CV-->
+             <a href="pdf/Ximiyeto_CV.pdf" target="_blank" >
             <button class="blog">View CV</button>
+            </a>
+            <!--Download CV-->
+            <a href="pdf/Ximiyeto_CV.pdf" download="Ximiyeto_CV">
             <button class="portfolio">Download CV</button>
+            </a>
           </div>
-        </div>
-        <div class="image">
+          </div>
+          <div class="image">
           <img src="images/profile.jpg" alt="profile" />
-        </div>
-      </div>
-<br> <br>
+         </div>
+         </div>
+        </section>
     </section>
 
-    <div id="Blog">
-      <div class="container">
-        <h1 class="sub-title">Blog</h1>
-        <div class="work_list">
-          <div class="work">
-            <img src="images/work1.jpg">
-          </div>
-          <div class="work">
-            <img src="images/work2.jpg">
-          </div>
-          <div class="work">
-            <img src="images/work3.jpg">
+    <!--Blog-->
+    <section id="blog">
+    <section class="blog-section">
+        <div class="blog_container">
+          <h1>Blog</h1>
+          <p>
+            Explore my latest work on both my professional life and insights!
+          </p>
+          <div class="blog-grid">
+            <article class="blog-post">
+              <img src="images/blog.jpg" alt="Blog Post 1" />
+              <div class="content">
+                <h2>My Life Outside Tech</h2>
+                <p>As a professional model, i have been featured in blogs and newspaper such as News24, IOL, Sunday Times, 
+                    IIE Rosebank College website e.t.c </p>
+                <a href="https://www.rosebankcollege.co.za/blog/perseverance-and-triumph-ximiyeto-makhubele-an-iie-rosebank-college-alumni-shines-as-a-top-10-finalist-in-miss-world-south-africa-2024/">Read More</a>
+              </div>
+            </article>
+            <article class="blog-post">
+              <img src="images/work2.jpg" alt="Blog Post 2" />
+              <div class="content">
+                <h2>My Achievements</h2>
+                <p>Graduated from IIE Rosebank College with an avegate of 81%
+                    where i was pursuing a Diploma in IT in Software Development
+                </p>
+                <a href="https://www.linkedin.com/posts/ximiyeto-makhubele-9b3903249_im-not-just-a-miss-world-south-africa-top-activity-7243129804294676480-ldoH?utm_source=share&utm_medium=member_desktop">Read More</a>
+              </div>
+            </article>
+            <article class="blog-post">
+              <img src="images/work3.jpg" alt="Blog Post 3" />
+              <div class="content">
+                <h2>My Life In Tech</h2>
+                <p>I recently won a tech project with my team called "Tech Craft"
+                    where by our project focused on an Adroit system.</p>
+                <a href="https://www.linkedin.com/posts/lethabo-makopo-a7643b184_this-week-team-techcraft-was-crowned-the-activity-7250191596061704194-m7By?utm_source=share&utm_medium=member_desktop">Read More</a>
+              </div>
+            </article>
           </div>
         </div>
+      </section>
+      </section>
+     <!----to be continued (JS)------>
+     <script> 
+        var tablinks= document.getElementsByClassName("tab_link");
+        var tabcontents = document.getElementsByClassName("tab_content");
+      
+        function opentab(tabname){
+          for(tablink of tablinks){
+            tablink.classList.remove("active_link");
+          }
+          for(tabcontents of tabcontents){
+            tabcontents.classList.remove("active_tab");
+          }
+          event.currentTarget.classList.add("active_link");
+          document.getElementById(tabname).classList.add("active_tab");
+        }
+      </script>
+
+<!--contact section-->
+<section id="contact">
+<section class="contact-section">
+    <div class="container">
+      <h1>Contact Me</h1>
+      <p>
+        I'd love to hear from you! Feel free to reach out to me using the form
+        below.
+      </p>
+      <div class="contact-form">
+        <form action="mailto:xmakhubele83@gmail.com" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
       </div>
     </div>
-    
-    <p>Get to know me more behind code</p>
+  </section>
+</section>
 
-    <h1>Contact Me</h1>
-<div class="contact">
-    <form action="#"method=POST>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name"required>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email"required>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit"><i class="fas fa-paper-plane"></i>Send message</button>
-
-    </form>
-</div>
-    <!----to be continued (JS)------>
-<script> 
-  var tablinks= document.getElementsByClassName("tab_link");
-  var tabcontents = document.getElementsByClassName("tab_content");
-
-  function opentab(tabname){
-    for(tablink of tablinks){
-      tablink.classList.remove("active_link");
-    }
-    for(tabcontents of tabcontents){
-      tabcontents.classList.remove("active_tab");
-    }
-    event.currentTarget.classList.add("active_link");
-    document.getElementById(tabname).classList.add("active_tab");
-  }
-</script>
-  </body>
+<!--footer section-->
+  <footer class="footer">
+    <div class="footer-container">
+      <p>&copy; 2024 Ximiyeto Makhubele. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/ximiyeto-makhubele-9b3903249?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bof4E0Fn%2FTHCAIHdUdx5zeQ%3D%3D" target="_blank" class="social-icon">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.twitter.com/ximiyeto" target="_blank" class="social-icon">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/shimiey_don/profilecard/?igsh=b3NuMDdkdWRybm04" target="_blank" class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://github.com/sidon59" target="_blank" class="social-icon">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
+    <div class="footer-back-to-top">
+        <a href="#top"><i class="fas fa-chevron-up"></i> Back to Top</a>
+      </div>
+      
+  </footer>
+</body>
 </html>
