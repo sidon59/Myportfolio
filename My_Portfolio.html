@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <!--For the Icons-->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <title>Ximiyeto Portfolio</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="#">Ximiyeto Makhubele</a></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+            <!--navigation-->
+          <li><a href="My_Portfolio.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!--landing page-->
+    <section class="section">
+      <div class="section__container">
+        <div class="content">  
+            <div class="inside">
+              <p class="subtitle">HI THERE</p>
+              <h1 class="title">
+              I am<span> Ximiyeto Makhubele <br/> </span> 
+              an aspiring UI/UX designer and web developer
+              </h1>
+              <p class="description">
+               Welcome to my profile/portfolio! <br>
+              Get to explore more about me and my work :)</p> 
+            </div>
+          <!--about section-->
+        <section id="about">
+            <h1 class="about" href="about">ABOUT ME</h1>
+            <div class="about-col-1"></div>
+            <P>I am a dedicated professional with a strong academic and tech background. 
+                As a former Head of Academia in ICT for the SRC at IIE Rosebank College, 
+                I focused on enhancing student learning and academic achievement. 
+                I'm also a Java candidate at Capaciti, refining my software development skills.
+                I developed the award-winning Adroit application, which secured 1st place at 
+                the University of Johannesburg under the Applied Information Systems faculty, 
+                showcasing my ability to balance design with functionality. 
+                As a former Miss World South Africa Top 10 finalist,
+                I combine creativity, discipline and leadership in every project,
+                including e-commerce and full-scale applications.</P>
+
+                 <!-- skills Buttons -->
+                    <div class="skills_buttons">
+                       <button onclick="showSection('skills')">Skills</button>
+                       <button onclick="showSection('experience')">Experience</button>
+                       <button onclick="showSection('education')">Education</button>
+                    </div>
+
+                 <!-- Sections for Skills, Experience, and Education -->
+                    <section id="skills" class="cont-section">
+                        <h2>Skills</h2>
+                        <ul>
+                         <li><strong>Web Development:</strong> HTML, CSS, PHP, JavaScript</li>
+                         <li><strong>Programming Languages:</strong> Java, C#, Kotlin, C++</li>
+                         <li><strong>Database Management:</strong> MySQL</li>
+                         <li><strong>Version Control:</strong> Git, GitHub, Azure</li>
+                        </ul>
+                   </section>
+
+                   <section id="experience" class="cont-section hidden">
+                        <h2>Experience</h2>
+                      <div class="job">
+                        <h3>Java candidate</h3>
+                        <h4>Capaciti x FNB</h4>
+                        <p><em>September 2024 - Current</em></p>
+                        <h3>IT Support intern</h3>
+                        <h4>IIE Rosebank Colege</h4>
+                        <p><em>April 2024 - September 2024</em></p>
+                        <h3>Brand Ambassador x IT</h3>
+                        <h4>IIE Rosebank Colege</h4>
+                        <p><em>January 2024 - March 2024</em></p>
+                        <h3>IT Professional Practise Tutor</h3>
+                        <h4>IIE Rosebank Colege</h4>
+                        <p><em>August 2023 - November 2023</em></p>
+                        
+                       </div>
+                    </section>
+
+                <section id="education" class="cont-section hidden">
+                    <h2>Education</h2>
+                    <div class="degree">
+                        <h3>Postgrad Advanced Diploma in Business IT</h3>
+                      <h4>University of Johannesburg</h4>
+                       <p><em>In Progress...</em></p>
+                      <h3>Diploma in IT in Software Development</h3>
+                      <h4>IIE Rosebank College</h4>
+                       <p><em>Graduated: 2023</em></p>
+                    </div>
+                </section>
+               <script>
+                   function showSection(sectionId) {
+                     // Hide all sections
+                     const sections = document.querySelectorAll('.cont-section');
+                     sections.forEach(section => {
+                      section.classList.remove('active');
+                        section.classList.add('hidden'); // Adds hidden class to all sections
+                       });
+
+                        // Show the selected section
+                        const targetSection = document.getElementById(sectionId);
+                       targetSection.classList.remove('hidden'); // Removes hidden class from the selected section
+                       targetSection.classList.add('active'); // Marks as active
+                        }
+
+                       // This shows the 'Skills' section by default when the page loads
+                          document.addEventListener('DOMContentLoaded', () => {
+                         showSection('skills');
+                    });
+
+                </script>
+             
+        </section> 
+        
+        <!--Resume section-->
+        <section id="resume">
+          <h2><i class="fas fa-time"></i>VIEW OR DOWNLOAD MY RESUME</h2><br>
+            <div class="action__btns">
+            <!--View CV-->
+             <a href="pdf/Ximiyeto_CV.pdf" target="_blank" >
+            <button class="blog">View CV</button>
+            </a>
+            <!--Download CV-->
+            <a href="pdf/Ximiyeto_CV.pdf" download="Ximiyeto_CV">
+            <button class="portfolio">Download CV</button>
+            </a>
+          </div>
+          </div>
+          <div class="image">
+          <img src="images/profile.jpg" alt="profile" />
+         </div>
+         </div>
+        </section>
+    </section>
+
+    <!--Blog-->
+      <section id="blog">
+          <section class="blog-section">
+             <div class="blog_container">
+                    <h1>Blog</h1>
+                    <p>
+                     Explore my latest work on both my professional life and insights!
+                    </p>
+                <div class="blog-grid">
+               <article class="blog-post">
+                  <img src="images/blog.jpg" alt="Blog Post 1" />
+                  <div class="content">
+                   <h2>My Life Outside Tech</h2>
+                   <p>As a professional model, i have been featured in blogs and newspaper such as News24, IOL, Sunday Times, 
+                    IIE Rosebank College website e.t.c </p>
+                   <a href="https://www.rosebankcollege.co.za/blog/perseverance-and-triumph-ximiyeto-makhubele-an-iie-rosebank-college-alumni-shines-as-a-top-10-finalist-in-miss-world-south-africa-2024/">Read More</a>
+                   </div>
+                </article>
+                <article class="blog-post">
+                   <img src="images/work2.jpg" alt="Blog Post 2" />
+                  <div class="content">
+                  <h2>My Achievements</h2>
+                  <p>Graduated from IIE Rosebank College with an average of 81%
+                    where i was pursuing a Diploma in IT in Software Development.
+                  </p>
+                  <a href="https://www.linkedin.com/posts/ximiyeto-makhubele-9b3903249_im-not-just-a-miss-world-south-africa-top-activity-7243129804294676480-ldoH?utm_source=share&utm_medium=member_desktop">Read More</a>
+                  </div>
+             </article>
+             <article class="blog-post">
+                  <img src="images/work3.jpg" alt="Blog Post 3" />
+                  <div class="content">
+                  <h2>My Life In Tech</h2>
+                  <p>My tech project called the Adroit system got position one 
+                    at the University of Johannesburg with my team the "Tech Craft".</p>
+                   <a href="https://www.linkedin.com/posts/lethabo-makopo-a7643b184_this-week-team-techcraft-was-crowned-the-activity-7250191596061704194-m7By?utm_source=share&utm_medium=member_desktop">Read More</a>
+                  </div>
+               </article>
+                 </div>
+                  </div>
+           </section>
+      </section>
+     <!----to be continued (JS)------>
+     <script> 
+        var tablinks= document.getElementsByClassName("tab_link");
+        var tabcontents = document.getElementsByClassName("tab_content");
+      
+        function opentab(tabname){
+          for(tablink of tablinks){
+            tablink.classList.remove("active_link");
+          }
+          for(tabcontents of tabcontents){
+            tabcontents.classList.remove("active_tab");
+          }
+          event.currentTarget.classList.add("active_link");
+          document.getElementById(tabname).classList.add("active_tab");
+        }
+      </script>
+
+<!--contact section-->
+<section id="contact">
+<section class="contact-section">
+    <div class="container">
+      <h1>Contact Me</h1>
+      <p>
+        I'd love to hear from you or collaborate with you :)
+        <br>Feel free to reach out to me using the form
+        below.
+      </p>
+      <div class="contact-form">
+        <form action="mailto:xmakhubele83@gmail.com" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!--footer section-->
+  <footer class="footer">
+    <div class="footer-container">
+      <p>&copy; 2024 Ximiyeto Makhubele. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/ximiyeto-makhubele-9b3903249?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bof4E0Fn%2FTHCAIHdUdx5zeQ%3D%3D" target="_blank" class="social-icon">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.twitter.com/shimieym" target="_blank" class="social-icon">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/shimiey_don" target="_blank" class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://github.com/sidon59" target="_blank" class="social-icon">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
+    <div class="footer-back-to-top">
+        <a href="#top"><i class="fas fa-chevron-up"></i> Back to Top</a>
+      </div>
+      
+  </footer>
+</body>
+</html>
