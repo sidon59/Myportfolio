@@ -208,7 +208,7 @@ span{
   font-weight: bold;
 }
 
-/* skills Buttons Styling */
+/* skills Buttons*/
 .skills_buttons {
   text-align: center;
   margin-top: 20px;
@@ -229,7 +229,7 @@ span{
   background-color: var(--primary-color);
 }
 
-/* Section Content Styling */
+/* Section Content */
 .cont-section {
   display: none;
   margin: 20px auto;
@@ -278,15 +278,12 @@ span{
 @media (max-width: 480px) {
   .skills_buttons button {
       padding: 6px 10px;
-      font-size: 12px;
-  }
-
-  
-
-  h2 {
-      font-size: 20px;
-  }
-}
+       font-size: 12px;
+      }
+     h2 {
+       font-size: 20px;
+      }
+    }
 
 /* Active class for showing the selected section */
 .active {
