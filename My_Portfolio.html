@@ -37,26 +37,31 @@
     <section class="section">
       <div class="section__container">
         <div class="content">  
-          <p class="subtitle">HI THERE</p>
-          <h1 class="title">
-            I am<span> Ximiyeto Makhubele <br/> </span> 
-           an aspiring UI/UX designer and web developer
-          </h1>
-          <p class="description">
-            Welcome to my profile/portfolio! <br>
-          Get to explore more about me and my work :)</p> 
+            <div class="inside">
+              <p class="subtitle">HI THERE</p>
+              <h1 class="title">
+              I am<span> Ximiyeto Makhubele <br/> </span> 
+              an aspiring UI/UX designer and web developer
+              </h1>
+              <p class="description">
+               Welcome to my profile/portfolio! <br>
+              Get to explore more about me and my work :)</p> 
+            </div>
           <!--about section-->
         <section id="about">
             <h1 class="about" href="about">ABOUT ME</h1>
             <div class="about-col-1"></div>
-            <P> I am a professional model with titles like Miss World South Africa top10,
-                a former SRC head of academia at the IIE Rosebank College
-                and a Java candidate at Capaciti 
-                with a passion for creating beautiful,
-                responsive as well as user-friendly websites. I've worked on a variety of
-                projects, ranging from e-commerce websites to Adroit application
-                which was also awarded as the top project (1st position) at the University Of Johannesburg under 
-                the Applied Information Systems faculty.</P>
+            <P>I am a dedicated professional with a strong foundation in both academics and technology.
+                 As a former Head of Academia for the SRC at IIE Rosebank College, I played a pivotal role in 
+                 shaping student learning experiences and promoting academic excellence. 
+                 Additionally, I am a Java candidate at Capaciti, where I am currently honing my technical skills 
+                 in software development. I have a passion for building beautiful, responsive, and user-friendly 
+                 websites. One of my notable achievements includes the development of the Adroit application,
+                 which earned 1st place at the University of Johannesburg under the Applied Information Systems faculty. 
+                 This project reflects my ability to merge design with functionality, providing real-world solutions in the tech space.
+                 As a former Miss World South Africa Top 10 finalist, I bring a unique blend of creativity, discipline, and leadership, 
+                 which I apply to every project I undertake. Throughout my journey, I’ve successfully worked on a range of projects, 
+                 from e-commerce platforms to full-scale applications, always ensuring a seamless and engaging user experience.</P>
 
                  <!-- skills Buttons -->
                     <div class="skills_buttons">
@@ -69,8 +74,8 @@
                     <section id="skills" class="cont-section">
                         <h2>Skills</h2>
                         <ul>
-                         <li><strong>Web Development:</strong> HTML, CSS, JavaScript</li>
-                         <li><strong>Programming Languages:</strong> Java, C#, Kotlin, PHP, C++</li>
+                         <li><strong>Web Development:</strong> HTML, CSS, PHP, JavaScript</li>
+                         <li><strong>Programming Languages:</strong> Java, C#, Kotlin, C++</li>
                          <li><strong>Database Management:</strong> MySQL</li>
                          <li><strong>Version Control:</strong> Git, GitHub</li>
                         </ul>
@@ -103,16 +108,16 @@
                      const sections = document.querySelectorAll('.cont-section');
                      sections.forEach(section => {
                       section.classList.remove('active');
-                        section.classList.add('hidden'); // Add hidden class to all sections
+                        section.classList.add('hidden'); // Adds hidden class to all sections
                        });
 
                         // Show the selected section
                         const targetSection = document.getElementById(sectionId);
-                       targetSection.classList.remove('hidden'); // Remove hidden class from the selected section
-                       targetSection.classList.add('active'); // Mark as active
+                       targetSection.classList.remove('hidden'); // Removes hidden class from the selected section
+                       targetSection.classList.add('active'); // Marks as active
                         }
 
-                       // Show the 'Skills' section by default when the page loads
+                       // This shows the 'Skills' section by default when the page loads
                           document.addEventListener('DOMContentLoaded', () => {
                          showSection('skills');
                     });
@@ -143,45 +148,45 @@
     </section>
 
     <!--Blog-->
-    <section id="blog">
-    <section class="blog-section">
-        <div class="blog_container">
-          <h1>Blog</h1>
-          <p>
-            Explore my latest work on both my professional life and insights!
-          </p>
-          <div class="blog-grid">
-            <article class="blog-post">
-              <img src="images/blog.jpg" alt="Blog Post 1" />
-              <div class="content">
-                <h2>My Life Outside Tech</h2>
-                <p>As a professional model, i have been featured in blogs and newspaper such as News24, IOL, Sunday Times, 
+      <section id="blog">
+          <section class="blog-section">
+             <div class="blog_container">
+                    <h1>Blog</h1>
+                    <p>
+                     Explore my latest work on both my professional life and insights!
+                    </p>
+                <div class="blog-grid">
+               <article class="blog-post">
+                  <img src="images/blog.jpg" alt="Blog Post 1" />
+                  <div class="content">
+                   <h2>My Life Outside Tech</h2>
+                   <p>As a professional model, i have been featured in blogs and newspaper such as News24, IOL, Sunday Times, 
                     IIE Rosebank College website e.t.c </p>
-                <a href="https://www.rosebankcollege.co.za/blog/perseverance-and-triumph-ximiyeto-makhubele-an-iie-rosebank-college-alumni-shines-as-a-top-10-finalist-in-miss-world-south-africa-2024/">Read More</a>
-              </div>
-            </article>
-            <article class="blog-post">
-              <img src="images/work2.jpg" alt="Blog Post 2" />
-              <div class="content">
-                <h2>My Achievements</h2>
-                <p>Graduated from IIE Rosebank College with an average of 81%
+                   <a href="https://www.rosebankcollege.co.za/blog/perseverance-and-triumph-ximiyeto-makhubele-an-iie-rosebank-college-alumni-shines-as-a-top-10-finalist-in-miss-world-south-africa-2024/">Read More</a>
+                   </div>
+                </article>
+                <article class="blog-post">
+                   <img src="images/work2.jpg" alt="Blog Post 2" />
+                  <div class="content">
+                  <h2>My Achievements</h2>
+                  <p>Graduated from IIE Rosebank College with an average of 81%
                     where i was pursuing a Diploma in IT in Software Development.
-                </p>
-                <a href="https://www.linkedin.com/posts/ximiyeto-makhubele-9b3903249_im-not-just-a-miss-world-south-africa-top-activity-7243129804294676480-ldoH?utm_source=share&utm_medium=member_desktop">Read More</a>
-              </div>
-            </article>
-            <article class="blog-post">
-              <img src="images/work3.jpg" alt="Blog Post 3" />
-              <div class="content">
-                <h2>My Life In Tech</h2>
-                <p>My tech project called the Adroit system got position one 
+                  </p>
+                  <a href="https://www.linkedin.com/posts/ximiyeto-makhubele-9b3903249_im-not-just-a-miss-world-south-africa-top-activity-7243129804294676480-ldoH?utm_source=share&utm_medium=member_desktop">Read More</a>
+                  </div>
+             </article>
+             <article class="blog-post">
+                  <img src="images/work3.jpg" alt="Blog Post 3" />
+                  <div class="content">
+                  <h2>My Life In Tech</h2>
+                  <p>My tech project called the Adroit system got position one 
                     at the University of Johannesburg with my team the "Tech Craft".</p>
-                <a href="https://www.linkedin.com/posts/lethabo-makopo-a7643b184_this-week-team-techcraft-was-crowned-the-activity-7250191596061704194-m7By?utm_source=share&utm_medium=member_desktop">Read More</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
+                   <a href="https://www.linkedin.com/posts/lethabo-makopo-a7643b184_this-week-team-techcraft-was-crowned-the-activity-7250191596061704194-m7By?utm_source=share&utm_medium=member_desktop">Read More</a>
+                  </div>
+               </article>
+                 </div>
+                  </div>
+           </section>
       </section>
      <!----to be continued (JS)------>
      <script> 

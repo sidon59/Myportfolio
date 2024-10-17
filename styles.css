@@ -164,18 +164,23 @@ color: var(--primary-color);
   padding: 1rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 4rem;
+  gap: 4rem;  
 }
 
 .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
 }
-
+.inside {
+  max-width: 600px; /* Adjust width if necessary */
+  padding: 20px;
+}
 .subtitle {
   letter-spacing: 2px;
   font-size: 2.0rem;
+  text-align: center;
   color: rgb(194, 11, 124);
   font-weight: 1000;
   margin-bottom: 0.6rem;
