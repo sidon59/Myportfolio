@@ -9,6 +9,7 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
       rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <script  src="script.js"></script>   
     <!--For the Icons-->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
@@ -33,6 +34,7 @@
         </ul>
       </div>
     </nav>
+    
     
     <!--landing page-->
     <section class="section">
@@ -76,7 +78,7 @@
                         <ul>
                          <li><strong>Web Development:</strong> HTML, CSS, PHP, JavaScript</li>
                          <li><strong>Programming Languages:</strong> Java, C#, Kotlin, C++</li>
-                         <li><strong>Database Management:</strong> MySQL</li>
+                         <li><strong>Database Management:</strong> MySQL, Firebase</li>
                          <li><strong>Version Control:</strong> Git, GitHub, Azure</li>
                         </ul>
                    </section>
@@ -243,6 +245,123 @@
       </div>
     </div>
   </section>
+
+  <!--Chat Box section-->
+  <div class="chat-icon" onclick="toggleChat()">
+    <i class="fas fa-comments"></i>
+</div>
+     <div class="chat-container" id="chatContainer" style="display: none;">
+        <div class="chat-box" id="chat-box">
+           <div class="chatmessage bot-message">
+             Hi! I'm Ximi, a chatbot. How can I assist you today?
+            </div>
+          </div>
+          <div id="suggestions-container" class="suggestions-container">
+            <!-- Suggestions will be generated here dynamically -->
+        </div>
+        <div class="input-chatbox">
+        <input type="text" id="user-chatinput" placeholder="Type your message..." />
+        </br></br>
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+
+    <script>
+      // Get the DOM elements
+const chatBox = document.getElementById("chat-box");
+const userInput = document.getElementById("user-chatinput");
+const sendBtn = document.getElementById("send-chatbtn");
+const suggestionsContainer = document.getElementById("suggestions-container"); // New suggestions container
+
+// Predefined bot responses
+const botResponses = {
+    "hi": "Hi! I'm Ximi, a chatbot. How can I assist you?",
+    "how are you": "I'm just a bot, but thanks for asking! How about you?",
+    "what's your name": "I'm your friendly chatbot!",
+    "help": "Sure! How can I help you today?",
+    "bye": "Goodbye! Have a great day!",
+    "default": "I'm sorry, I didn't understand that. You can ask me things like 'help', 'hi', or 'bye'."
+};
+    
+// Predefined suggestions for user-friendly interaction
+const suggestions = ["Hi", "How are you", "What's your name", "Help", "B 
+ye"];
+
+// Function to toggle chat visibility
+function toggleChat() {
+    var chatContainer = document.getElementById("chatContainer");
+    if (chatContainer.style.display === "none" || chatContainer.style.display === "") {
+        chatContainer.style.display = "block";
+        showSuggestions();  // Show suggestions when chat opens
+    } else {
+        chatContainer.style.display = "none";
+    }
+}
+
+// Function to send a message
+function sendMessage() {
+    const userText = userInput.value.trim().toLowerCase();
+
+    if (userText === "") return; // If input is empty, do nothing
+
+    // Add the user message to the chat
+    addMessage(userText, "user-message");
+
+    // Get the bot response
+    const botReply = botResponses[userText] || botResponses["default"];
+    setTimeout(() => {
+        addMessage(botReply, "bot-message");
+    }, 500); // Bot response delay
+
+    // Clear the input field after sending
+    userInput.value = "";
+
+    // Update suggestions based on context (if necessary)
+    showSuggestions();
+}
+
+// Function to add a message to the chat
+function addMessage(text, className) {
+    const messageElement = document.createElement("div");
+    messageElement.className = `chatmessage ${className}`;
+    messageElement.textContent = text;
+    chatBox.appendChild(messageElement);
+
+    // Scroll to the bottom of the chat
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+// Show suggestions below the chat input
+function showSuggestions() {
+    // Clear the previous suggestions
+    suggestionsContainer.innerHTML = "";
+
+    // Generate new suggestions
+    suggestions.forEach(suggestion => {
+        const suggestionElement = document.createElement("button");
+        suggestionElement.className = "suggestion-btn";
+        suggestionElement.textContent = suggestion;
+        suggestionElement.onclick = () => {
+            userInput.value = suggestion;
+            sendMessage();
+        };
+        suggestionsContainer.appendChild(suggestionElement);
+    });
+}
+
+// Event listener for the send button
+sendBtn.addEventListener("click", sendMessage);
+
+// Event listener for the "Enter" key
+userInput.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        sendMessage();
+    }
+});
+
+    </script>
+    <script  src="script.js"></script> 
+
 </section>
 
 <!--footer section-->
