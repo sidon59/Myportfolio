@@ -722,13 +722,13 @@ button:hover {
 
 .bot-message {
   background-color: #e1ffc7;
-  /*align-self: flex-start;*/
+  align-self: flex-start;
   text-align: left;
 }
 
 .user-message {
   background-color: #daf0ff;
-  /*align-self: flex-end;*/
+  align-self: flex-end;
   text-align: right;
 }
 

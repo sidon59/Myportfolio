@@ -257,33 +257,39 @@
       Hi! I'm Ximi, a chatbot. How can I assist you today?
     </div>
   </div>
-  <div id="suggestion-box" class="suggestion-box">
-    <!-- Suggestions will be generated here dynamically -->
-  </div>
+  <div id="suggestion-box" class="suggestion-box"></div>
 </div>
 
 <script>
   // Portfolio-related Q&A data
   const portfolioData = {
-    "Tell me about yourself": {
+    "initial": [
+        { question: "Tell me about yourself", followUp: ["What is your experience?", "What projects have you worked on?"] },
+        { question: "What skills do you have?", followUp: ["Tell me about yourself", "What projects have you worked on?"] }
+      ],
+      "Tell me about yourself": {
         answer: "I am a dedicated professional with expertise in both technology and academics, passionate about creating responsive websites.",
-        followUp: "Would you like to know more about my projects or skills?"
+        followUp: ["What is your experience?", "What projects have you worked on?", "Thank you, goodbye!"]
       },
       "What projects have you worked on?": {
         answer: "I've worked on e-commerce websites and a top-rated Adroit application under the Applied Information Systems faculty.",
-        followUp: "Is there something specific you'd like to know more about in my project experience?"
+        followUp: ["What skills do you have?", "What is your experience?", "Thank you, goodbye!"]
       },
       "What is your experience?": {
         answer: "My experience includes a role as SRC Head of Academia at IIE Rosebank College and finalist in Miss World South Africa Top 10.",
-        followUp: "Would you like to know more about my achievements or the roles I held?"
+        followUp: ["Tell me about yourself", "What skills do you have?", "Thank you, goodbye!"]
       },
       "What skills do you have?": {
         answer: "I'm skilled in Java, UI/UX design, and responsive web development.",
-        followUp: "I can also share more about my certifications or specific technical skills if you're interested."
+        followUp: ["What projects have you worked on?", "Tell me about yourself", "Thank you, goodbye!"]
+      },
+      "Thank you, goodbye!": {
+        answer: "Thank you for chatting! Feel free to return if you have more questions. Goodbye!",
+        followUp: []
       }
     };
 
-    let questionCounter = 0;
+   // let questionCounter = 0;
 
   // Function to toggle the chat container's visibility
   function toggleChat() {
@@ -291,7 +297,7 @@
     chatContainer.style.display = chatContainer.style.display === "block" ? "none" : "block";
     
     if (chatContainer.style.display === "block") {
-      populateSuggestions(); // Populate suggestions only when chat is opened
+      populateSuggestions("initial"); // Populate suggestions only when chat is opened
     }
   }
 
@@ -311,37 +317,43 @@
   function handleResponse(question) {
       const response = portfolioData[question];
       addMessage(response.answer, "bot-message");
-      questionCounter++;
+     // questionCounter++;
 
-      if (questionCounter >= 3) {
+     // if (questionCounter >= 10) {
         // After three questions, give a closing message
-        addMessage("Thank you for the chat! If you have more questions, feel free to ask anytime. Goodbye!", "bot-message");
-        document.getElementById("suggestion-box").innerHTML = ""; // Clear suggestions
-      } else if (response.followUp) {
+       // addMessage("Thank you for the chat! If you have more questions, feel free to ask anytime. Goodbye!", "bot-message");
+        //document.getElementById("suggestion-box").innerHTML = ""; // Clear suggestions
+     // } else if (response.followUp) {
         // Provide follow-up message if available
-        addMessage(response.followUp, "bot-message");
-      }
+       // addMessage(response.followUp, "bot-message");
+   //   }
+    
+
+    populateSuggestions(response.followUp);
     }
 
-  // Function to populate the suggestion buttons in the chat
-  function populateSuggestions() {
-    const suggestionBox = document.getElementById("suggestion-box");
-    suggestionBox.innerHTML = ''; // Clear any existing suggestions
+    // Function to populate the suggestion buttons in the chat
+    function populateSuggestions(suggestionKeys) {
+      const suggestionBox = document.getElementById("suggestion-box");
+      suggestionBox.innerHTML = ''; // Clear any existing suggestions
 
-    Object.keys(portfolioData).forEach(question => {
-      const suggestionButton = document.createElement("button");
-      suggestionButton.className = "suggestion-button";
-      suggestionButton.textContent = question;
-      
-      // Add an event listener to handle button clicks
-      suggestionButton.addEventListener("click", () => handleResponse(question));
-      
-      suggestionBox.appendChild(suggestionButton);
-    });
-  }
-  // Load suggestions initially (when the DOM is fully loaded)
-  document.addEventListener("DOMContentLoaded", () => {
-      populateSuggestions(); // Load suggestions on page load
+      suggestionKeys.forEach(key => {
+        const suggestionButton = document.createElement("button");
+        suggestionButton.className = "suggestion-button";
+        suggestionButton.textContent = key;
+        
+        // Add an event listener to handle button clicks
+        suggestionButton.addEventListener("click", () => handleResponse(key));
+        
+        suggestionBox.appendChild(suggestionButton);
+      });
+    }
+
+    // Load initial suggestions when the DOM is fully loaded
+    document.addEventListener("DOMContentLoaded", () => {
+      populateSuggestions(portfolioData["initial"].map(item => item.question)); // Load initial suggestions on page load
+    
+    
     });
 
   </script>
