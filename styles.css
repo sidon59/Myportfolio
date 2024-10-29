@@ -646,8 +646,9 @@ button:hover {
   bottom: 20px;
   right: 20px;
   background-color: palevioletred;
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
+  border: 2px solid var(--primary-color);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -668,13 +669,13 @@ button:hover {
 }
 #chatContainer {
   width: 300px;
-  height: 400px;
+  height: 380px;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #f1f1f1;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+  bottom: 30px;
+  right: 90px;
+  background-color: palevioletred;
+  border: 1px solid black;
+  border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
@@ -689,19 +690,19 @@ button:hover {
   flex-grow: 1;
   padding: 10px;
   overflow-y: auto;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid black;
 }
 
 .chatmessage {
-  margin-bottom: 8px;
-  padding: 8px;
-  border-radius: 5px;
+  margin-bottom: 6px;
+  padding: 6px;
+  border-radius: 18px;
   max-width: 80%;
 }
 
 .user-message {
-  background-color: #0084ff;
-  color: white;
+  background-color: white;
+  color: black;
   align-self: flex-end;
 }
 
@@ -719,33 +720,18 @@ button:hover {
 
 .suggestion-button {
   margin: 5px;
-  padding: 8px;
-  background-color: #007bff;
-  color: white;
+  padding: 3px;
+  background-color: white;
+  color: palevioletred;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .suggestion-button:hover {
-  background-color: #0056b3;
+  background-color: var(--primary-color);
 }
 
-#chat-icon {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  background-color: #007bff;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 24px;
-}
 /*Footer section*/
 .footer {
   background-color: palevioletred;

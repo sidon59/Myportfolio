@@ -1,3 +1,14 @@
+document.getElementById("chat-icon").addEventListener("click", toggleChat);
+
+function toggleChat() {
+    const chatContainer = document.getElementById("chatContainer");
+    chatContainer.classList.toggle("hidden");
+    //chatContainer.style.display = chatContainer.style.display === "block" ? "none" : "block";
+    
+    if(!chatContainer.classList.contains("hidden")){
+        populateSuggestions(portfolioData["initial"].map(item => item.question));
+    }
+}
 // Portfolio-related Q&A data
 const portfolioData = {
     "initial": [
@@ -29,15 +40,7 @@ const portfolioData = {
    let questionCounter = 0;
 
   // Function to toggle the chat container's visibility
-  function toggleChat() {
-    const chatContainer = document.getElementById("chatContainer");
-    chatContainer.classList.toggle("hidden");
-    //chatContainer.style.display = chatContainer.style.display === "block" ? "none" : "block";
-    
-    if(!chatContainer.classList.contains("hidden")){
-        populateSuggestions(portfolioData["initial"].map(item => item.question));
-    }
-}
+ 
    // if (chatContainer.style.display === "block") {
      // populateSuggestions("initial"); // Populate suggestions only when chat is opened
    // }
@@ -86,7 +89,7 @@ const portfolioData = {
     document.addEventListener("DOMContentLoaded", () => {
         const chatIcon = document.getElementById("chat-icon");
         chatIcon.addEventListener("click", toggleChat); // Add event listener to chat icon
-        populateSuggestions(portfolioData["initial"].map(item => item.question)); // Load initial suggestions on page load
+       // populateSuggestions(portfolioData["initial"].map(item => item.question)); // Load initial suggestions on page load
       });
-      
+
 
