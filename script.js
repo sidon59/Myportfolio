@@ -26,17 +26,22 @@ const portfolioData = {
       }
     };
 
-   // let questionCounter = 0;
+   let questionCounter = 0;
 
   // Function to toggle the chat container's visibility
   function toggleChat() {
     const chatContainer = document.getElementById("chatContainer");
-    chatContainer.style.display = chatContainer.style.display === "block" ? "none" : "block";
+    chatContainer.classList.toggle("hidden");
+    //chatContainer.style.display = chatContainer.style.display === "block" ? "none" : "block";
     
-    if (chatContainer.style.display === "block") {
-      populateSuggestions("initial"); // Populate suggestions only when chat is opened
+    if(!chatContainer.classList.contains("hidden")){
+        populateSuggestions(portfolioData["initial"].map(item => item.question));
     }
-  }
+}
+   // if (chatContainer.style.display === "block") {
+     // populateSuggestions("initial"); // Populate suggestions only when chat is opened
+   // }
+ // }
 
   // Function to add a message to the chat
   function addMessage(text, className) {
@@ -68,7 +73,10 @@ const portfolioData = {
         suggestionButton.textContent = key;
         
         // Add an event listener to handle button clicks
-        suggestionButton.addEventListener("click", () => handleResponse(key));
+        suggestionButton.addEventListener("click", () => {
+            questionCounter++;
+            handleResponse(key);
+        });
         
         suggestionBox.appendChild(suggestionButton);
       });
@@ -76,9 +84,9 @@ const portfolioData = {
 
     // Load initial suggestions when the DOM is fully loaded
     document.addEventListener("DOMContentLoaded", () => {
-      populateSuggestions(portfolioData["initial"].map(item => item.question)); // Load initial suggestions on page load
-    
-    
-    });
-
+        const chatIcon = document.getElementById("chat-icon");
+        chatIcon.addEventListener("click", toggleChat); // Add event listener to chat icon
+        populateSuggestions(portfolioData["initial"].map(item => item.question)); // Load initial suggestions on page load
+      });
+      
 
