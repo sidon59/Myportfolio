@@ -249,8 +249,8 @@
 
   <!-- Chat Box Section -->
  <!-- Chat Icon to Toggle Chat Box -->
- <div class="chat-icon" id="chat-icon">
-  <i class="fas fa-comments"></i>  
+ <div class="chat-icon" id="chat-icon" onclick="toggleChat()">
+  <i class="fas fa-comments"></i>
 </div>
 <div id="chatContainer" class="hidden">
   <div id="chat-box">
@@ -260,6 +260,13 @@
   </div>
   <div id="suggestion-box" class="suggestion-box"></div>
 </div>
+
+<script>
+  document.querySelector('.chat-icon').addEventListener('click', function() {
+  const chatContainer = document.getElementById('chatContainer');
+  chatContainer.classList.toggle('active');
+});
+</script>
 </section>
 
 <!--footer section-->

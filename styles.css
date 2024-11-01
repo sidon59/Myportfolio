@@ -657,6 +657,7 @@ button:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   font-size: 24px;
   color: white;
+  z-index: 100;
 }
 
 .chat-icon i {
@@ -671,19 +672,20 @@ button:hover {
   width: 300px;
   height: 380px;
   position: fixed;
-  bottom: 30px;
-  right: 90px;
+  bottom: 100px;
+  right: 20px;
   background-color: palevioletred;
   border: 1px solid black;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
+  visibility: hidden;
+  
 }
 
-/* Hidden class to control visibility */
-.hidden {
-  display: none;
+#chatContainer.active{
+  visibility: visible;
 }
 
 #chat-box {
@@ -704,12 +706,14 @@ button:hover {
   background-color: white;
   color: black;
   align-self: flex-end;
+  
 }
 
 .bot-message {
   background-color: #e5e5ea;
   color: black;
   align-self: flex-start;
+  text-align: right;
 }
 
 #suggestion-box {
@@ -726,10 +730,14 @@ button:hover {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .suggestion-button:hover {
   background-color: var(--primary-color);
+}
+.hidden{
+  display: none;
 }
 
 /*Footer section*/
