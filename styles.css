@@ -713,7 +713,6 @@ button:hover {
   background-color: #e5e5ea;
   color: black;
   align-self: flex-start;
-  text-align: right;
 }
 
 #suggestion-box {
