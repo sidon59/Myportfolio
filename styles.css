@@ -220,7 +220,7 @@ span{
 /* skills Buttons*/
 .skills_buttons {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .skills_buttons button {
@@ -316,6 +316,7 @@ span{
   cursor: pointer;
 }
 
+/* resume section*/
 .hire__me {
   background-color: var(--primary-color);
   color: #ffffff;
@@ -610,16 +611,16 @@ button:hover {
 /* Responsive Layout */
 @media (min-width: 768px) {
   .contact-form {
-    flex-direction: row; /* Align form groups horizontally on larger screens */
+    flex-direction: row; 
     gap: 2rem;
   }
 
   .form-group {
-    flex: 1; /* Ensure all form fields take equal space */
+    flex: 1; 
   }
 
   textarea {
-    resize: vertical; /* Allow message area to resize vertically */
+    resize: vertical; 
   }
 }
 
@@ -813,7 +814,7 @@ button:hover {
   display: inline-block;
   padding: 5px 10px;
   background-color: #a30f66; 
-  color: #ffffff; /* Text/icon color */
+  color: #ffffff; 
   border-radius: 2px;
   text-align: center;
   transition: background-color 0.3s ease;
